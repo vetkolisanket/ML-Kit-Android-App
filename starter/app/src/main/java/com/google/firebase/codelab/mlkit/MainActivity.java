@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             public void onFailure(@NonNull Exception e) {
                                 // Task failed with an exception
                                 mTextButton.setEnabled(true);
+                                showToast(e.getMessage());
                                 e.printStackTrace();
                             }
                         });
@@ -226,6 +227,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 // Task failed with an exception
                                 mFaceButton.setEnabled(true);
                                 e.printStackTrace();
+                                showToast(e.getMessage());
                             }
                         });
     }
